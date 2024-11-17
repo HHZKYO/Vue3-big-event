@@ -6,6 +6,16 @@ const userStore = useUserStore()
 
 <template>
 <div>
+  <hr />
+  <router-view></router-view>
+
+
+  <hr />
+  <hr />
+  <hr />
+  <hr />
+
+
   <h1>hello</h1>
   <p>{{ userStore.token }}</p>
   <el-button @click="userStore.setToken('asdf')">登录</el-button>
