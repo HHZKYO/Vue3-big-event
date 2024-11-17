@@ -1,9 +1,16 @@
 <script setup>
+import { useUserStore } from './stores/user';
 
+const userStore = useUserStore()
 </script>
 
 <template>
-<div><h1>hello</h1></div>
+<div>
+  <h1>hello</h1>
+  <p>{{ userStore.token }}</p>
+  <el-button @click="userStore.setToken('asdf')">登录</el-button>
+  <el-button @click="userStore.removeToken()">退出</el-button>
+</div>
 </template>
 
 <style scoped>
